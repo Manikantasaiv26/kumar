@@ -1,0 +1,81 @@
+    5 yum install java
+       java -version
+    6  mkdir tempo
+    7  cd tempo/
+    8   wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.9.56886.zip
+    9  ll
+   10  chmod -R 775 sonarqube-8.9.9.56886.zip
+   11  id
+   12  chmod -R 775 sonarqube-8.9.9.56886.zip
+   13  ll
+   14  unzip  sonarqube-8.9.9.56886.zip
+   15  ll
+   16  cd sonarqube-8.9.9.56886
+   17  ll
+   18  cd bin
+   19  cd bin/
+   20  cd linux-x86-64/
+   21  ./sonar.sh start
+   22  ./sonar.sh status
+   23  curl ifconfig.me
+Use this commands
+sudo yum install java
+     mkdir trmpo
+     cd trmpo/
+     wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.9.56886.zip
+     ll
+     chmod -R 775 sonarqube-8.9.9.56886.zip
+     id
+     chmod -R 775 sonarqube-8.9.9.56886.zip
+     ll
+     unzip sonarqube-8.9.9.56886.zip
+     ll
+     cd sonarqube-8.9.9.56886
+     ll
+     cd bin
+     cd bin/
+     ls -alrt
+     cd linux-x86-64/
+     ./sonar.sh start
+     ./sonar.sh status
+     curl ifconfig.me
+
+sudo su
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip
+ll
+    chmod -R 775 apache-tomcat-9.0.64.zip
+    unzip apache-tomcat-9.0.64
+    cd apache-tomcat-9.0.64
+    ll
+    cd conf/
+    ll
+  
+    vi server.xml
+<Connector port="8008" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+
+    vi tomcat-users.xml
+           note : <role rolename="manager-gui,manager-script,manager-jmx"/>
+<user username="admin" password="admin" roles="admin-gui,manager-gui,manager-script"/>
+
+    tail -n 10 tomcat-users.xml
+    cd ..
+    ll
+    cd webapps/
+    ll
+    cd manager
+    ll
+    cd WEB-INF
+    ll
+    pwd
+    cd ..
+    cd ..
+    cd ..
+    ll
+    cd bin/
+    ll
+    pwd
+    ./startup.sh
+    curl ifconfig.me
