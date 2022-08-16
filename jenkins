@@ -1,0 +1,8 @@
+  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+     ll
+      sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+     yum install java
+     yum install jenkins
+     curl ifconfig.me
+     service jenkins restart
+     
