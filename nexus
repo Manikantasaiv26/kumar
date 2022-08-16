@@ -1,0 +1,39 @@
+
+
+Nexus: 
+    2  ll
+    3  clear
+    4  sudo yum list | grep java-1.8
+    5  sudo yum install java-1.8.0-openjdk -y
+    6  java -version
+    7  cd /opt/
+    8  ll
+    9  sudo wget https://download.sonatype.com/nexus/3/nexus-3.41.0-01-unix.tar.gz
+   10  ll
+   11  ls
+   12  ls -alrt
+   13  sudo mv nexus-3.41.0-01/ nexus3
+   14  sudo tar xf nexus-3.41.0-01-unix.tar.gz
+   15  ls -alrt
+   16  sudo mv nexus-3.41.0-01/ nexus3
+   17  sudo chown -R ec2-user:ec2-user nexus3/ sonatype-work/
+   18  ls -l
+   19  cd nexus3/
+   20  ll
+   21  cd bin/
+   22  ls
+   23  ./nexus start
+   24  vi nexus.rc
+   25  ll
+   27  sudo ln -s /opt/nexus3/bin/nexus /etc/init.d/nexus
+   28  ll
+   29  cd /etc/init.d
+   30  sudo chkconfig --addnexus
+   31  sudo chkconfig --add nexus
+   32  sudo chkconfig --levels 345 nexus on
+   33  sudo service nexus start
+   34  sudo service nexus status
+   35  sudo service nexus restart
+   36  sudo service nexus status
+   37  history
+
